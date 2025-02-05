@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Little-Feng</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2023-07-09T15:42:03.729Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>Little-Feng</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>告别</title>
+    <link href="/2023/07/09/2023/%E5%91%8A%E5%88%AB/"/>
+    <id>/2023/07/09/2023/告别/</id>
+    <published>2023-07-10T06:35:14.000Z</published>
+    <updated>2023-07-09T15:42:03.729Z</updated>
+    
+    <summary type="html">
+    
+      有东西被加密了, 请输入密码查看.
+    
+    </summary>
+    
+      <category term="校园生活" scheme="/categories/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="加密文章" scheme="/tags/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>致谢</title>
+    <link href="/2023/07/09/2023/%E8%87%B4%E8%B0%A2/"/>
+    <id>/2023/07/09/2023/致谢/</id>
+    <published>2023-07-10T06:23:16.000Z</published>
+    <updated>2023-07-10T00:00:13.307Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;/p&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="校园生活" scheme="/categories/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我的共产主义观</title>
+    <link href="/2022/12/28/2022/%E6%9D%82%E8%B0%88/%E6%88%91%E7%9A%84%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%93%B2%E5%AD%A6%E8%A7%82/"/>
+    <id>/2022/12/28/2022/杂谈/我的马克思主义哲学观/</id>
+    <published>2022-12-29T02:46:34.000Z</published>
+    <updated>2023-03-09T07:12:52.371Z</updated>
+    
+    <summary type="html">
+    
+      共产主义
+    
+    </summary>
+    
+      <category term="哲学" scheme="/categories/%E5%93%B2%E5%AD%A6/"/>
+    
+    
+      <category term="加密文章" scheme="/tags/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>幂级数浅谈2</title>
+    <link href="/2022/06/23/2022/%E7%BC%96%E7%A8%8B/%E6%95%B0%E5%AD%A6math/%E5%B9%82%E7%BA%A7%E6%95%B0%E6%B5%85%E8%B0%882/"/>
+    <id>/2022/06/23/2022/编程/数学math/幂级数浅谈2/</id>
+    <published>2022-06-24T04:20:34.000Z</published>
+    <updated>2023-03-09T07:12:52.369Z</updated>
+    
+    <summary type="html">
+    
+      幂级数
+    
+    </summary>
+    
+      <category term="数学" scheme="/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+      <category term="-数学" scheme="/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>幂级数浅谈1</title>
+    <link href="/2022/06/20/2022/%E7%BC%96%E7%A8%8B/%E6%95%B0%E5%AD%A6math/%E5%B9%82%E7%BA%A7%E6%95%B0%E6%B5%85%E8%B0%881/"/>
+    <id>/2022/06/20/2022/编程/数学math/幂级数浅谈1/</id>
+    <published>2022-06-20T15:47:25.000Z</published>
+    <updated>2023-03-09T07:12:52.369Z</updated>
+    
+    <summary type="html">
+    
+      幂级数
+    
+    </summary>
+    
+      <category term="数学" scheme="/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+      <category term="-数学" scheme="/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深思-1</title>
+    <link href="/2021/12/19/2022/%E6%9D%82%E8%B0%88/%E6%B7%B1%E6%80%9D-1/"/>
+    <id>/2021/12/19/2022/杂谈/深思-1/</id>
+    <published>2021-12-20T07:03:35.000Z</published>
+    <updated>2023-03-09T07:12:52.371Z</updated>
+    
+    <summary type="html">
+    
+      思考
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="加密文章" scheme="/tags/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>伽罗瓦理论：人类至今无解的五次方程</title>
+    <link href="/2021/12/10/2022/%E7%BC%96%E7%A8%8B/%E6%95%B0%E5%AD%A6math/%E4%BC%BD%E7%BD%97%E7%93%A6%E7%90%86%E8%AE%BA%EF%BC%9A%E4%BA%BA%E7%B1%BB%E8%87%B3%E4%BB%8A%E6%97%A0%E8%A7%A3%E7%9A%84%E4%BA%94%E6%AC%A1%E6%96%B9%E7%A8%8B/"/>
+    <id>/2021/12/10/2022/编程/数学math/伽罗瓦理论：人类至今无解的五次方程/</id>
+    <published>2021-12-11T07:18:18.000Z</published>
+    <updated>2023-03-09T07:12:52.370Z</updated>
+    
+    <summary type="html">
+    
+      数学
+    
+    </summary>
+    
+      <category term="数学" scheme="/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+      <category term="数学史" scheme="/tags/%E6%95%B0%E5%AD%A6%E5%8F%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>校园生活-7</title>
+    <link href="/2021/12/06/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-7/"/>
+    <id>/2021/12/06/2022/校园生活/校园生活-7/</id>
+    <published>2021-12-07T06:51:48.000Z</published>
+    <updated>2023-03-09T07:12:52.370Z</updated>
+    
+    <summary type="html">
+    
+      校园生活
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="加密文章" scheme="/tags/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>校园生活-6</title>
+    <link href="/2021/12/04/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-6/"/>
+    <id>/2021/12/04/2022/校园生活/校园生活-6/</id>
+    <published>2021-12-05T06:39:35.000Z</published>
+    <updated>2023-03-09T07:12:52.370Z</updated>
+    
+    <summary type="html">
+    
+      校园生活
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="校园生活" scheme="/tags/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>校园生活-5</title>
+    <link href="/2021/11/20/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-5/"/>
+    <id>/2021/11/20/2022/校园生活/校园生活-5/</id>
+    <published>2021-11-20T10:08:32.000Z</published>
+    <updated>2023-03-09T07:12:52.370Z</updated>
+    
+    <summary type="html">
+    
+      校园生活
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="校园生活" scheme="/tags/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nodejs配置</title>
+    <link href="/2021/11/17/2022/%E7%BC%96%E7%A8%8B/nodejs%E9%85%8D%E7%BD%AE/"/>
+    <id>/2021/11/17/2022/编程/nodejs配置/</id>
+    <published>2021-11-17T20:17:51.000Z</published>
+    <updated>2023-03-09T07:12:52.369Z</updated>
+    
+    <summary type="html">
+    
+      前端
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="前端" scheme="/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>校园生活-4</title>
+    <link href="/2021/10/26/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-4/"/>
+    <id>/2021/10/26/2022/校园生活/校园生活-4/</id>
+    <published>2021-10-27T06:54:51.000Z</published>
+    <updated>2023-03-09T07:12:52.370Z</updated>
+    
+    <summary type="html">
+    
+      校园生活
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="校园生活" scheme="/tags/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>校园生活-3</title>
+    <link href="/2021/10/03/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-3/"/>
+    <id>/2021/10/03/2022/校园生活/校园生活-3/</id>
+    <published>2021-10-04T05:40:14.000Z</published>
+    <updated>2023-03-09T07:12:52.371Z</updated>
+    
+    <summary type="html">
+    
+      校园生活
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="校园生活" scheme="/tags/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>校园生活-2</title>
+    <link href="/2021/09/21/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-2/"/>
+    <id>/2021/09/21/2022/校园生活/校园生活-2/</id>
+    <published>2021-09-22T05:44:46.000Z</published>
+    <updated>2023-03-09T07:12:52.371Z</updated>
+    
+    <summary type="html">
+    
+      校园生活
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="校园生活" scheme="/tags/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="旅游" scheme="/tags/%E6%97%85%E6%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>校园生活-1</title>
+    <link href="/2021/09/13/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-1/"/>
+    <id>/2021/09/13/2022/校园生活/校园生活-1/</id>
+    <published>2021-09-14T06:18:16.000Z</published>
+    <updated>2023-03-09T07:12:52.371Z</updated>
+    
+    <summary type="html">
+    
+      校园生活
+    
+    </summary>
+    
+      <category term="校园生活" scheme="/categories/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="校园生活" scheme="/tags/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021暑假咸鱼日志_4</title>
+    <link href="/2021/08/24/2022/%E5%92%B8%E9%B1%BC%E6%97%A5%E5%BF%97/2021%E6%9A%91%E5%81%87%E5%92%B8%E9%B1%BC%E6%97%A5%E5%BF%97_4/"/>
+    <id>/2021/08/24/2022/咸鱼日志/2021暑假咸鱼日志_4/</id>
+    <published>2021-08-25T05:39:12.000Z</published>
+    <updated>2023-03-09T07:12:52.371Z</updated>
+    
+    <summary type="html">
+    
+      咸鱼日志
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="加密文章" scheme="/tags/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021暑假咸鱼日志_3</title>
+    <link href="/2021/08/21/2022/%E5%92%B8%E9%B1%BC%E6%97%A5%E5%BF%97/2021%E6%9A%91%E5%81%87%E5%92%B8%E9%B1%BC%E6%97%A5%E5%BF%97_3/"/>
+    <id>/2021/08/21/2022/咸鱼日志/2021暑假咸鱼日志_3/</id>
+    <published>2021-08-21T17:59:10.000Z</published>
+    <updated>2023-03-09T07:12:52.371Z</updated>
+    
+    <summary type="html">
+    
+      咸鱼日志
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="快乐售卖机" scheme="/tags/%E5%BF%AB%E4%B9%90%E5%94%AE%E5%8D%96%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深度学习小技巧 mini-batch 梯度下降</title>
+    <link href="/2021/08/18/2022/%E7%BC%96%E7%A8%8B/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%B0%8F%E6%8A%80%E5%B7%A7%20mini-batch%20%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/"/>
+    <id>/2021/08/18/2022/编程/深度学习小技巧 mini-batch 梯度下降/</id>
+    <published>2021-08-18T23:17:29.000Z</published>
+    <updated>2023-03-09T07:12:52.369Z</updated>
+    
+    <summary type="html">
+    
+      咸鱼日记
+    
+    </summary>
+    
+      <category term="深度学习" scheme="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="深度学习" scheme="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sublime Text python 配置</title>
+    <link href="/2021/08/16/2022/%E7%BC%96%E7%A8%8B/Sublime%20Text%20python%20%E9%85%8D%E7%BD%AE/"/>
+    <id>/2021/08/16/2022/编程/Sublime Text python 配置/</id>
+    <published>2021-08-16T23:40:07.000Z</published>
+    <updated>2023-03-09T07:12:52.369Z</updated>
+    
+    <summary type="html">
+    
+      咸鱼日志
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Sublime Text" scheme="/tags/Sublime-Text/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021暑假咸鱼日记_2</title>
+    <link href="/2021/08/15/2022/%E5%92%B8%E9%B1%BC%E6%97%A5%E5%BF%97/2021%E6%9A%91%E5%81%87%E5%92%B8%E9%B1%BC%E6%97%A5%E5%BF%97_2/"/>
+    <id>/2021/08/15/2022/咸鱼日志/2021暑假咸鱼日志_2/</id>
+    <published>2021-08-15T07:05:32.000Z</published>
+    <updated>2023-03-09T07:12:52.371Z</updated>
+    
+    <summary type="html">
+    
+      实习日志
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="实习日志" scheme="/tags/%E5%AE%9E%E4%B9%A0%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+</feed>

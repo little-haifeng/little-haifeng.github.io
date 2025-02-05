@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">伽罗瓦理论：人类至今无解的五次方程 | Little-Feng</title>
+  
+    <link rel="shortcut icon" href="/img/social/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="https://www.jsdelivr.com/">
+  <link rel="stylesheet" href="/css/lightgallery.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/volantis.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="/css/matery.css"> -->
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "とある科学の楓";
+  mashiro_option.author_name = "楓";
+  mashiro_option.site_url = "https://little-haifeng.github.io/";
+  mashiro_option.v_appId = "Jiq7DwLJk7SE5cHYaQyoRss2-gzGzoHsz";
+  mashiro_option.v_appKey = "6l2n8MzYg1TVB7aJB4O4gO7b";
+  mashiro_option.mathjax = "1";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://imgapi.xl0408.top/index.php,https://api.yimian.xyz/img,https://api.r10086.com/PPT/PPT.php?PPT=%E5%8E%9F%E7%A5%9E".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://little-haifeng.github.io/">
+          <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/custom/avatar_1.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>真正的大师永远怀着一颗虔诚学徒的心</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/little-haifeng" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://music.163.com/#/user/home?id=405591202" target="_blank" class="social-github" title="wangyiyun">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/social/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.zhihu.com/people/jian-zhu-50-26" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/social/zhihu.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://space.bilibili.com/189593771" target="_blank" class="social-github" title="bilibili">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/social/bilibili.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/social/qq.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/custom/qq.jpg">
+                  </div>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/custom/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">とある科学の</span>
+            <span class="shironeko">楓</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/">
+                          <i class="fa fa-tag" aria-hidden="true"></i>
+                          标签
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/">
+                          <i class="fa fa-bookmark" aria-hidden="true"></i>
+                          分类
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/analytics/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-line-chart" aria-hidden="true"></i>
+                    统计
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/cover/7.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/cover/7.png">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      伽罗瓦理论：人类至今无解的五次方程</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://cdn.jsdelivr.net/gh/wang1375830242/CDN/images/indexjpg.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="">little-feng</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-12-10<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        
+        <div class="entry-content">
+          <h2 align="center">用汗水和生命浇灌出来的理论之花，困扰人类300多年的高阶谜团</h2>
+
+<p><img style="text-align:center;width:100%;" src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/page/1.png" align="center"></p>
+<h2 id="天才早夭"><a href="#天才早夭" class="headerlink" title="天才早夭"></a>天才早夭</h2><p>1832年，自知必死的伽罗瓦奋笔疾书，写出了一篇几乎半个世纪都没人看懂、只有32页纸的论文，并时不时在一旁写下“我没有时间”，第二天他毅然决然参与决斗并身亡，一个瘦弱而极富激情的天才就这样走了，最后闪现出的是绝世才华，他的生命只有21岁！<br>1832年，自知必死的伽罗瓦奋笔疾书，写出了一篇几乎半个世纪都没人看懂、只有32页纸的论文，并时不时在一旁写下“我没有时间”，第二天他毅然决然参与决斗并身亡，一个瘦弱而极富激情的天才就这样走了，最后闪现出的是绝世才华，他的生命只有21岁！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/page/2.png" align="center" style="text-align:center;width:100%;"></p>
+<h2 id="群论、数学质变的前夕"><a href="#群论、数学质变的前夕" class="headerlink" title="群论、数学质变的前夕"></a>群论、数学质变的前夕</h2><p>为什么数学家对五次方程如此迷恋，因为在五次方程的求解过程中，数学家们第一次凿开了隐藏在冰山下的现代科学，将数学带入了精妙绝伦的现代群论。群论的出现，直接奠定了20世纪的物理基础，从此，统治人类近200年的牛顿机械宇宙观开始迈入随机和不确定性的量子世界和广袤无垠的时空相对论。一场空前伟大的科学革命如疾风骤雨般来临。</p>
+<p>在这次暴风雨的前夜，历史上最伟大的数学家们悉数登场，他们为五次方程的求解而苦苦思索。</p>
+<p>在五次方程获得求解之前，一元三、四次方程在数学大神塔尔塔利亚、卡尔达诺、费拉里的努力下，顺利得到了解决，然而到了五次方程，再传统地以根用系数的代数式求解却始终行不通。在各大高手尝试失败后，它很快成了数学家心中的顶尖难题，这是属于神的命题，与人类无关。</p>
+<p>在这条解方程的漫漫长路上，最先为五次方程求解提供了新思路的是上帝之子欧拉，他通过一个巧妙的变换把任何一个全系数的五次方程转化为具有 $x+ax+b=0$ 的形式。出于对这一优美表达的倾心喜爱，欧拉自以为是地认为可以找出五次方程的通解表达式。</p>
+<p>与此同时，数学天才拉格朗日也在为寻找五次方程的解而废寝忘食。很快，他便欣喜地发现了一种特别的方法，若将四次方程降阶为三次方程，就能找到一种求解四次方程的简单方法。但遗憾的是，同样的变换却将五次方程升阶为六次方程。</p>
+<p>此后，五次方程的进展一度陷入迷局。当时五次方程的焦点主要集中在两大问题上，第一个问题是，对N次方程，至少都有一个解吗？第二个问题则更进一步：N次方程如果有解，那么它会有多少个解呢？人类历史上另一伟大数学家高斯挥动如椽巨笔，成功解决了这两大问题，证明了分圆多项式 $-1+xp$（p为素数）可以用根式求解，但拨开迷雾之后，一个更加狰狞的难题仍然浮现在眼前，五次方程是否可以用根式求解的难题依旧困扰着人类，挥之不去。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/page/3.png" align="center" style="text-align:center;width:100%;"></p>
+<h2 id="数学本无种，业余民科遭歧视"><a href="#数学本无种，业余民科遭歧视" class="headerlink" title="数学本无种，业余民科遭歧视"></a>数学本无种，业余民科遭歧视</h2><p>为了求解五次方程，欧洲大陆的数学家正紧锣密鼓地开展深入研究。1800年，一位远在意大利的内科医生兼数学爱好者鲁菲尼写出了一篇500多页的论文。在该文中，鲁菲尼声称，一般五次方程（以上）没有能用通项公式表达的解（简称无解）。面对着这一“业余民科”的证明，数学家们深表怀疑，又由于篇幅过长，没有人愿意花精力去验证鲁菲尼的过程。</p>
+<p>鲁菲尼心有不甘，在此后的两年间两次将自己的证明寄给了拉格朗日，信中，他迫切地恳求拉格朗日的点评，但是仍然石沉大海。眼看着自己的成果无人问津，鲁菲尼并没有灰心，他花了10年时间潜心简化和整理自己的证明，最后在1813年写成了论文：对一般代数方程的反思。</p>
+<p>最后，鲁菲尼终于等到了数学界的回音。法国数学会在提交给国王的一份报告里总结过去一百年间的数学进展时提到了鲁菲尼，但是对他论文的评价竟是：虽然鲁菲尼试图证明五次方程无解，但是他肯定做不到。</p>
+<p>为五次方程耗费15年精力的鲁菲尼失望到了极点，他在51岁时再次将论文投到了英国皇家学会，很快论文也被无情地拒绝。唯一让他感到欣慰的是，大数学家柯西亲自给他回信肯定了他的工作价值。命运似乎对鲁菲尼过于残酷，他没有等到自己的荣誉就抱憾辞世。在他去世以后，他的成果也在浩如烟海的学术文献中渐渐被众人遗忘。</p>
+<p>多年以后，鲁菲尼的论文被人重新发现，尽管证明仍然有漏洞，但是从鲁菲尼开始，人们终于找到了研究五次方程的正确方向：从寻找一般的求解公式到证明五次方程没有公式解。从此，代数学即将迎来新的篇章。然而，建造现代数学桥梁的进程远比鲁菲尼的境遇更为坎坷。一条通往现代群论的铁路，却要用今后最杰出的天才数学家伽罗瓦浸染鲜血的枕木来铺就。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/page/4.png" align="center;" style="text-align:center;width:100%;"></p>
+<h2 id="一波三折，遭受蒙尘的天才"><a href="#一波三折，遭受蒙尘的天才" class="headerlink" title="一波三折，遭受蒙尘的天才"></a>一波三折，遭受蒙尘的天才</h2><p>伽罗瓦的横空出世，才使属于神管理范畴的五次方程坠落凡尘。有人说伽罗瓦是人类历史上最具才华的数学大师，是天才中的天才，是被神所嫉妒的人，神害怕这样的人类存在，甚至不愿意看到与他有交往的人活着，想方设法地打击他和折磨他，直到他21岁开枪自尽。</p>
+<p>1830年，19岁的伽罗瓦写出了关于五次方程的伟大论文，他证明了一元n次多项式方程能用根式求解的一个充分必要条件，是该方程的伽罗瓦群为“可解群”（见有限群）。由于一般的一元n次方程的伽罗瓦群是n个文字的对称群Sn，而当n≥5时Sn不是可解群，所以一般的五次以上一元方程不能用根式求解。</p>
+<p>伽罗瓦以绝世才华打开了隐藏300年的“群论”领域，他开心地把他的论文给交给了当时的数学大师奥古斯丁·路易·柯西，柯西把手稿带回家审阅，还没来得及看就去世了，死后也没有找到手稿的任何踪迹。次年伽罗瓦再次将方程式论写成三篇文章，自信满满地提交资料参加数学大奖，资料被送到让·巴普蒂斯·约瑟夫·傅里叶手中后，傅里叶没多久就去世了，伽罗瓦的论文再次遭受蒙尘。</p>
+<p>伽罗瓦大神在泊松鼓励下向科学院递交了伽罗瓦理论论文，两面派的泊松却又说伽罗瓦的理论“不可理解”，年轻气盛满腹才华的伽罗瓦怒火中烧，觉得数学这个领域没什么好玩的，当即把力量全部投入到政治运动中，且说出“如果需要一具尸体来唤醒人民，我愿意献出我的”这样的激烈言辞。数理领域的顶尖天才就像新时代的愤青，对世界充满了盛怒。</p>
+<p>随后的机缘巧合，让伽罗瓦在政治活动中偶遇了他生命中的女神，并为其神魂颠倒，赴汤蹈火，最终欲火焚身。这是一个有夫之妇的神秘女子，她的丈夫同伽罗瓦的性格如出一辙，狂暴愤怒，两人为此而争吵决斗，最终伽罗瓦在决斗中不幸死去。</p>
+<p>或许是神灵也有所愧疚，让伽罗瓦在死前整理遗稿，并将其成果托付给了朋友奥古斯特·谢瓦利埃。朋友不负嘱托，把遗稿寄给了卡尔·弗里德里希·高斯与雅各比，却都没有得到响应。直到1843年，才出现伯乐刘维尔慧眼识才，不仅肯定了伽罗瓦的思想，还将大神的一元五次方程公布于众，至此，伽罗瓦的天才才被世人所知。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/page/5.png" align="center" style="text-align:center;width:100%;"></p>
+<h2 id="惊世才华、解惑300多年的方程难题"><a href="#惊世才华、解惑300多年的方程难题" class="headerlink" title="惊世才华、解惑300多年的方程难题"></a>惊世才华、解惑300多年的方程难题</h2><p>横空出世的天才伽罗瓦，经过一波三折的层层打压后，终于将300多年来人类滞留的数学界难题的解惑成果公之于世，并从此给人类立下不朽功勋。</p>
+<p>现在我们就来解读下当年大神是用了何方神圣战胜这难题的。据说，战略的制胜秘诀在于他用了群论的方式，分析论证了五次方程的求解问题。由此披荆斩棘，成功地证明了当$n≥5$时n次交错群是非交换的单群，是不可解的。而一般的n次方程是n次对称群，因而一般5次和5次以上的方程不可能用根式解就是其一个直接的推论。</p>
+<p>到此，画面还是有些模糊，我们再详细地剖析解读下现场。设(x)是域F上一个不可约多项式，假定它是可分的。作为(x)的分裂域E，E对于F的伽罗瓦群实际上就是(x)=0的根集上的置换群，而E在F的中间域就对应于解方程(x)=0的一些必要的中间方程。方程(x)=0可用根式解的充分必要条件是E对于F的伽罗瓦群是可解群。由于伽罗瓦证明了当n≥5时n次交错群An是非交换的单群，当然是不可解的，而且一般的n次方程的伽罗瓦群是n次对称群，因而一般5次和5次以上的方程不可能用根式解。</p>
+<p>大神这套使用群论证的必杀技最终成功地破解了方程可解性的奥秘，清楚阐述了为何五次以上方程没有公式解，而四次以下有公式解。并且还证明了高斯的言论，若用尺规作图能作出正p边形，p为质数，甚至借此完成了一次纵向穿越，解决了古代三大作图问题中的两个：“不能任意三等分角”、“倍立方不可能”。这些都为数学界做出了巨大的贡献，因此，后来人类将大神的成果用心整理为“伽罗瓦理论”，发展至当代，它已然不负大神的期望，成为了数与数论的基本支柱之一，功勋卓越。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/page/6.png" align="center" style="text-align:center;width:100%;"></p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这场用汗水和生命浇灌出来的理论之花终于在三次方程求解成功的200年后绽放，给后世子孙留下了无穷无尽的智慧宝藏。曾经困扰人类300多年的高阶谜团，终于被伽罗瓦解答。时至如今，生活在21世纪的人类，依旧受益于大神赐予的这一伟大思维盛宴。</p>
+<hr>
+<p>转载自<strong>博科园-科学科普｜文：李韵阁｜来自：量子学派（quantumschool）</strong></p>
+<hr>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/custom/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/custom/WeChatQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2021/12/19/2022/杂谈/深思-1/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/cover/8.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/cover/8.png">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                深思-1</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2021/12/06/2022/校园生活/校园生活-7/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/cover/6.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/cover/6.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                校园生活-7</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "Jiq7DwLJk7SE5cHYaQyoRss2-gzGzoHsz",
+        appKey: "6l2n8MzYg1TVB7aJB4O4gO7b",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/wang1375830242/CDN/images/indexjpg.jpg" itemprop="image" alt="little-feng" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author">little-feng</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>人工智障开发的007选手</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2025 Little-Feng<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+     <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2018</p>
+    </div>
+   <a id="timeDate">载入天数...</a><a id="times">载入时分秒...</a>
+   <script>
+  var now = new Date();
+  function createtime() {
+    var grt= new Date("03/08/2020 16:44:00");//此处修改你的建站时间或者网站上线时间
+    now.setTime(now.getTime()+250);
+    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+    document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  }
+  setInterval("createtime()",250);</script>
+    <div id="binft" font-size=14px></div>
+  <script>
+    var binft = function (r) {
+      function t() {
+        return b[Math.floor(Math.random() * b.length)]
+      }
+      function e() {
+        return String.fromCharCode(94 * Math.random() + 33)
+      }
+      function n(r) {
+        for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+          var l = document.createElement("span");
+          l.textContent = e(), l.style.color = t(), n.appendChild(l)
+        }
+        return n
+      }
+      function i() {
+        var t = o[c.skillI];
+        c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+      }
+      var l = "",
+      o = ["一花一世界,一石一天国,君掌盛无边,刹那含永劫"].map(function (r) {
+      return r + ""
+      }),
+      a = 2,
+      g = 1,
+      s = 5,
+      d = 75,
+      b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+      c = {
+        text: "",
+        prefixP: -s,
+        skillI: 0,
+        skillP: 0,
+        direction: "forward",
+        delay: a,
+        step: g
+      };
+      i()
+      };
+      binft(document.getElementById('binft'));
+  </script>
+  </div><!-- .site-info -->
+  <!--壁纸切换-->
+  <div class="skin-menu no-select" id="mainskin"  style="position: fixed">
+      <div class="theme-controls row-container">
+          <ul class="menu-list">
+              <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+              <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+              <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+              <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+              <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+              <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+              <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+              <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+          </ul>
+      </div>
+      <div class="font-family-controls row-container">
+          <button type="button" class="control-btn-serif selected" data-mode="serif" onclick="mashiro_global.font_control.change_font()">Serif</button>
+          <button type="button" class="control-btn-sans-serif" data-mode="sans-serif" onclick="mashiro_global.font_control.change_font()">Sans Serif</button>
+      </div>
+  </div>   
+  <canvas id="night-mode-cover"></canvas> 
+    <div class="changeSkin-gear no-select">
+      <div class="keys" id="setbtn"> <span id="open-skinMenu"> 切换壁纸 | SCHEME TOOL 
+        &nbsp;<i class="iconfont icon-gear inline-block rotating"></i> </span></div>
+  </div><!-- skin.end -->
+</footer>
+<!-- <script src="/js/tocbot.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.min.js"></script>
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
+<script src='/js/Valine.min.js'></script>
+<!-- <script src="https://cdn.staticfile.org/twikoo/1.5.11/twikoo.all.min.js"></script> -->
+<!-- <script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script> -->
+<script src="/js/botui.js"></script>
+<!-- // 烟花 -->
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/js/fireworks.js"></script>
+<!-- 板娘 -->
+  <!--自定义看板娘-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script src="/live2d-widget/autoload.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+
+<!-- 樱花飘落 -->
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/sakura.js"></script>
+<!-- // 星星跟随坠落 -->
+<script src="https://cdn.jsdelivr.net/gh/cungudafa/cdn@2.1.2/js/cursor.js"></script>
+ <!--背景切换-->
+ <script src="https://instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<!-- 不蒜子 网页计数器 -->
+<!-- <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/video/","name":"起风了1.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/video/","name":"起风了1.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+<!-- <div style="text-align:center;margin-top:-40px;"><a href="https://beian.miit.gov.cn/#/Integrated/index">吉ICP备2021003904号-1</a></div> -->
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/custom/avatar_1.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">とある科学の楓</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/honjun" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="http://weibo.com/mashirozx?is_all=1" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=3330909301&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/">
+                  <i class="fa fa-tag" aria-hidden="true"></i>
+                  标签
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/">
+                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  分类
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/analytics/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-line-chart" aria-hidden="true"></i>
+            统计
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="6750683218"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.3"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>

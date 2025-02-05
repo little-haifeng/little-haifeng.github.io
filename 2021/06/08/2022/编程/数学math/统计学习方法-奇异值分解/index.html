@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">统计学习方法-奇异值分解 | Little-Feng</title>
+  
+    <link rel="shortcut icon" href="/img/social/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="https://www.jsdelivr.com/">
+  <link rel="stylesheet" href="/css/lightgallery.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/volantis.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="/css/matery.css"> -->
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "とある科学の楓";
+  mashiro_option.author_name = "楓";
+  mashiro_option.site_url = "https://little-haifeng.github.io/";
+  mashiro_option.v_appId = "Jiq7DwLJk7SE5cHYaQyoRss2-gzGzoHsz";
+  mashiro_option.v_appKey = "6l2n8MzYg1TVB7aJB4O4gO7b";
+  mashiro_option.mathjax = "1";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://imgapi.xl0408.top/index.php,https://api.yimian.xyz/img,https://api.r10086.com/PPT/PPT.php?PPT=%E5%8E%9F%E7%A5%9E".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://little-haifeng.github.io/">
+          <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/custom/avatar_1.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>真正的大师永远怀着一颗虔诚学徒的心</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/little-haifeng" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://music.163.com/#/user/home?id=405591202" target="_blank" class="social-github" title="wangyiyun">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/social/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.zhihu.com/people/jian-zhu-50-26" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/social/zhihu.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://space.bilibili.com/189593771" target="_blank" class="social-github" title="bilibili">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/social/bilibili.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/social/qq.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/custom/qq.jpg">
+                  </div>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/custom/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">とある科学の</span>
+            <span class="shironeko">楓</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/资源/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/随想/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/转载/">
+                          <i class="fa fa-book" aria-hidden="true"></i>
+                          转载
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/">
+                          <i class="fa fa-tag" aria-hidden="true"></i>
+                          标签
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/">
+                          <i class="fa fa-bookmark" aria-hidden="true"></i>
+                          分类
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/analytics/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-line-chart" aria-hidden="true"></i>
+                    统计
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/lab/">
+                          <i class="fa fa-cogs" aria-hidden="true"></i>
+                          Lab
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/wang1375830242/CDN/20.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/wang1375830242/CDN/20.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      统计学习方法-奇异值分解</h1>
+      <p class="entry-census">
+        <span>
+          <a href="little-feng.top">
+            <img src="https://cdn.jsdelivr.net/gh/wang1375830242/CDN/images/indexjpg.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="little-feng.top">little-feng</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2021-6-8<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        
+        <div class="entry-content">
+          <h2 id="第15章奇异值分解·-习题"><a href="#第15章奇异值分解·-习题" class="headerlink" title="第15章奇异值分解·-习题"></a>第15章奇异值分解·-习题</h2><h3 id="习题15-1"><a href="#习题15-1" class="headerlink" title="习题15.1"></a>习题15.1</h3><p>&emsp;&emsp;试求矩阵<br>$$<br>X= \left[\begin{matrix} 1 &amp; 2 &amp; 0 \ 2 &amp; 0 &amp; 2\end{matrix}\right]<br>$$<br>的奇异值分解。</p>
+<p>解： 在实际计算中，应该求$A^TA$或$AA^T$中较小的方阵的特征值，因为<br>$$<br>AA^T = \left[\begin{matrix} 1 &amp; 2 &amp; 0 \ 2 &amp; 0 &amp; 2\end{matrix}\right]<br>\left[\begin{matrix} 1 &amp; 2  \ 2 &amp; 0  \  0 &amp; 2\end{matrix}\right]<br>= \left[\begin{matrix} 5 &amp; 2 \ 2 &amp; 8 \end{matrix} \right]<br>$$<br>为$2 \times 2$的方阵，而$A^H A$为$3 \times 3$方阵，固求前者的的特征值更方便些</p>
+<p>$$<br>\left|\begin{array}{cccc}<br>\lambda \mathbf{I} - AA^T<br>\end{array}\right|  =<br>\left|\begin{array}{cccc}<br>\lambda-5 &amp; 2  \ 2 &amp; \lambda-8<br>\end{array}\right|  = (\lambda-4)(\lambda-9)<br>$$<br>因此，$A^HA$的特征值为$\lambda_1=4$，$\lambda_2=9$，他们相应的单位特征向量分别为<br>$$<br>\beta_1 = \cfrac{1}{\sqrt{5}}\left[ \begin{matrix} 2\ 1\end{matrix}\right],\beta_2 = \cfrac{1}{\sqrt{5}}\left[ \begin{matrix} 1\ -2\end{matrix}\right]<br>$$</p>
+<p>则$A^TA$的特征值分别为$\lambda_1=4$,$\lambda_2=9$，而$\lambda_3=0$且属于它们的特征向量分别为<br>$$<br>\alpha_1 = \cfrac{1}{\sqrt{5}} \left[\begin{matrix} 0 \ -2 \ 1 \end{matrix}\right] ,\quad<br>\alpha_2 = \cfrac{1}{3\sqrt{5}} \left[\begin{matrix} 5 \ 2 \ 4 \end{matrix}\right], \quad<br>\alpha_3 = \cfrac{1}{3} \left[\begin{matrix} -2 \ 1 \ 2 \end{matrix}\right]<br>$$<br>矩阵$A^TA$属于不同的特征值的特征向量彼此正交得到，令<br>$$<br>V=(\alpha_1,\alpha_2,\alpha_3),\quad<br>U = (\beta_1,\beta_2),\quad<br>\Sigma = \left[\begin{matrix} 2 &amp; 0 &amp; 0 \ 0 &amp; 3 &amp; 0\end{matrix}\right]<br>$$<br>则<br>$$<br>A = U\Sigma V^T = \left[\begin{matrix} \cfrac{2}{\sqrt{5}} &amp; \cfrac{1}{\sqrt{5}} \ \cfrac{1}{\sqrt{5}} &amp; \cfrac{-2}{\sqrt{5}} \end{matrix}\right]<br>\left[\begin{matrix} 2 &amp; 0 &amp; 0 \ 0 &amp; 3 &amp; 0\end{matrix}\right]<br>\left[\begin{matrix} 0 &amp; -\cfrac{2}{\sqrt{5}} &amp; \cfrac{1}{\sqrt{5}}\ \cfrac{\sqrt{5}}{3} &amp; \cfrac{1}{3\sqrt{5}} &amp; \cfrac{4}{3\sqrt{5}}\ -\cfrac{2}{3} &amp; \cfrac{1}{3} &amp; \cfrac{2}{3}\end{matrix}\right]<br>$$</p>
+<h3 id="习题15-2"><a href="#习题15-2" class="headerlink" title="习题15.2"></a>习题15.2</h3><p>&emsp;&emsp;试求矩阵<br>$$<br>A= \left[\begin{matrix} 2 &amp; 4 \ 1 &amp; 3 \ 0 &amp; 0 \ 0 &amp; 0\end{matrix}\right]<br>$$<br>的奇异值分解并写出外积展开式。</p>
+<p>解：求矩阵的特征值和特征向量<br>求对称矩阵$A^TA$<br>$$<br>A^TA= \left[\begin{matrix} 2 &amp; 1 &amp; 0 &amp; 0 \ 4 &amp; 3 &amp; 0 &amp; 0 \end{matrix}\right]<br>\left[\begin{matrix} 2 &amp; 4 \ 1 &amp; 3 \ 0 &amp; 0 \ 0 &amp; 0\end{matrix}\right] =<br>\left[\begin{matrix} 5 &amp; 11 \ 11 &amp; 25 \end{matrix}\right]<br>$$<br>特征值$\lambda$和特征向量x满足特征方程<br>$$<br>(A^TA-\lambda I)x = 0<br>$$<br>得到齐次线性方程组<br>$$<br>f(x)=\begin{cases}<br>\begin{aligned}<br>(5 - \lambda)x_1 + \quad \quad11x_2=0  \<br>11x_1+ \quad \quad (25-\lambda)x_2 = 0  \<br>\end{aligned}<br>\end{cases}<br>$$</p>
+<p>该方程组有非零解的充要条件是<br>$$<br>\left | \begin{matrix}<br>5-\lambda &amp; 11 \<br>11 &amp; 25-\lambda<br>\end{matrix} \right | = 0<br>$$</p>
+<p>解此方程，得矩阵$A^TA$的特征值$\lambda_1 = 15+\sqrt{221}$和$\lambda_2 = 15-\sqrt{221}$。</p>
+<p>将特征值分别代入线性方程组，分别得到对应的单位特征向量<br>$$<br>v_1 = \cfrac{1}{\sqrt{442+20\sqrt{221}}}\left[\begin{matrix} 11 \ 10+\sqrt{221}\end{matrix}\right],\quad<br>v_2 = \cfrac{1}{\sqrt{442-20\sqrt{221}}}\left[\begin{matrix} -11 \ \sqrt{221}-10 \end{matrix}\right]<br>$$<br>(2)构造正交矩阵得$V$<br>$$<br>V = \left[\begin{matrix} \cfrac{11}{\sqrt{442+20\sqrt{221}}} &amp; -\cfrac{11}{\sqrt{442-20\sqrt{221}}} \ \cfrac{10+\sqrt{221}}{\sqrt{442+20\sqrt{221}}} &amp; \cfrac{\sqrt{221}-10}{\sqrt{442-20\sqrt{221}}} \end{matrix}\right]<br>$$<br>(3)求对角矩阵$\Sigma$<br>$$<br>\Sigma = \left[\begin{matrix} \sqrt{15+\sqrt{221}} &amp; 0 \ 0&amp; \sqrt{15-\sqrt{221}} \ 0 &amp; 0 \ 0 &amp; 0\end{matrix}\right]<br>$$</p>
+<p>为了使得$\Sigma$能够与$U$,$V$进行矩阵乘法运算。在$\Sigma$中加入零向量。</p>
+<p>(4)求正交矩阵$U$<br>基于$A$的奇异值计算得到列向量$u_1,u_2$<br>$$<br>u_1 = \cfrac{1}{\sigma_1}Av_1 = \cfrac{1}{\sqrt{15+\sqrt{221}}}<br>\left[\begin{matrix} 2 &amp; 4 \ 1 &amp; 3 \ 0 &amp; 0 \ 0 &amp; 0\end{matrix}\right]<br>\left[\begin{matrix} \cfrac{11}{\sqrt{442+20\sqrt{221}}} \ \cfrac{10+\sqrt{221}}{\sqrt{442+20\sqrt{221}}}\end{matrix}\right]<br>= \left[\begin{matrix} \cfrac{62 + 4\sqrt{221}}{\sqrt{(15+\sqrt{221})(442+20\sqrt{221})}}  \ \cfrac{41 + 3\sqrt{221}}{\sqrt{(15+\sqrt{221})(442+20\sqrt{221})}} \ 0 \ 0 \end{matrix}\right]<br>$$<br>$$<br>u_2 = \cfrac{1}{\sigma_2}Av_2 = \cfrac{1}{\sqrt{15-\sqrt{221}}}<br>\left[\begin{matrix} 2 &amp; 4 \ 1 &amp; 3 \ 0 &amp; 0 \ 0 &amp; 0\end{matrix}\right]<br>\left[\begin{matrix} -\cfrac{11}{\sqrt{442-20\sqrt{221}}} \ \cfrac{\sqrt{221}-10}{\sqrt{442-20\sqrt{221}}}\end{matrix}\right]<br>= \left[\begin{matrix} \cfrac{62 + 4\sqrt{221}}{\sqrt{(15-\sqrt{221})(442-20\sqrt{221})}}  \ \cfrac{41 + 3\sqrt{221}}{\sqrt{(15-\sqrt{221})(442-20\sqrt{221})}} \ 0 \ 0 \end{matrix}\right]<br>$$</p>
+<p>因为列向量$u_3,u_4$是$A^T$的零空间的一组$N(A^T)$的一组标准正交基，即求解<br>$$<br>A^Tx= \left[\begin{matrix} 2 &amp; 1 &amp; 0 &amp; 0 \ 4 &amp; 3 &amp; 0 &amp; 0\end{matrix}\right]<br>\left[\begin{matrix} x_1 \ x_2 \ x_3 \ x_4 \end{matrix}\right] =<br>\left[\begin{matrix} 0 \ 0 \end{matrix}\right]<br>$$<br>取$x_3,x_4$的基础系解，得到$N(A^T)$的一组标准正交基<br>$$<br>u_3= \begin{pmatrix} 0,0,1,0 \end{pmatrix}^T, \quad<br>u_4= \begin{pmatrix} 0,0,0,1 \end{pmatrix}^T<br>$$<br>构造正交矩阵$U$<br>$$<br>U = \left[\begin{matrix} \cfrac{62 + 4\sqrt{221}}{\sqrt{(15+\sqrt{221})(442+20\sqrt{221})}} &amp; \cfrac{62 + 4\sqrt{221}}{\sqrt{(15-\sqrt{221})(442-20\sqrt{221})}} &amp; 0 &amp; 0 \ \cfrac{41 + 3\sqrt{221}}{\sqrt{(15+\sqrt{221})(442+20\sqrt{221})}} &amp; \cfrac{41 + 3\sqrt{221}}{\sqrt{(15-\sqrt{221})(442-20\sqrt{221})}} &amp; 0 &amp; 0 \ 0 &amp; 0 &amp; 1 &amp; 0\ 0 &amp; 0 &amp; 0 &amp; 1\end{matrix}\right]<br>$$<br>(5)矩阵$A$的奇异值分解<br>$$<br>A = U \Sigma V^T =<br>\left[\begin{matrix} \cfrac{62 + 4\sqrt{221}}{\sqrt{(15+\sqrt{221})(442+20\sqrt{221})}} &amp; \cfrac{62 + 4\sqrt{221}}{\sqrt{(15-\sqrt{221})(442-20\sqrt{221})}} &amp; 0 &amp; 0 \ \cfrac{41 + 3\sqrt{221}}{\sqrt{(15+\sqrt{221})(442+20\sqrt{221})}} &amp; \cfrac{41 + 3\sqrt{221}}{\sqrt{(15-\sqrt{221})(442-20\sqrt{221})}} &amp; 0 &amp; 0 \ 0 &amp; 0 &amp; 1 &amp; 0\ 0 &amp; 0 &amp; 0 &amp; 1\end{matrix}\right]<br>\left[\begin{matrix} \sqrt{15+\sqrt{221}} &amp; 0 \ 0&amp; \sqrt{15-\sqrt{221}} \ 0 &amp; 0 \ 0 &amp; 0\end{matrix}\right]<br>\left[\begin{matrix} \cfrac{11}{\sqrt{442+20\sqrt{221}}} &amp; -\cfrac{11}{\sqrt{442-20\sqrt{221}}} \ \cfrac{10+\sqrt{221}}{\sqrt{442+20\sqrt{221}}} &amp; \cfrac{\sqrt{221}-10}{\sqrt{442-20\sqrt{221}}} \end{matrix}\right]<br>$$<br>(6)矩阵$A$的外积展开式<br>$$<br>A = \sigma_1 u_1v_1^T +  \sigma_2 u_2v_2^T = \left[\begin{matrix} \cfrac{684+44\sqrt{221}}{442+20\sqrt{221}} &amp; \cfrac{1504+102\sqrt{221}}{442\sqrt{221}}  \ \cfrac{451+33\sqrt{221}}{442+20\sqrt{221}} &amp; \cfrac{1073+71\sqrt{221}}{442+20\sqrt{221}} \ 0 &amp; 0 \ 0 &amp; 0\end{matrix}\right] +<br>\left[\begin{matrix} - \cfrac{682+44\sqrt{221}}{442-20\sqrt{221}} &amp; \cfrac{264+22\sqrt{221}}{442-20\sqrt{221}} \ -\cfrac{451+33\sqrt{221}}{442-20\sqrt{221}} &amp; \cfrac{253+11\sqrt{221}}{442-20\sqrt{221}} \ 0 &amp; 0 \ 0 &amp; 0 \end{matrix}\right]<br>= \left[\begin{matrix} 2 &amp; 4 \ 1 &amp; 3 \ 0 &amp; 0 \ 0 &amp; 0\end{matrix}\right]<br>$$</p>
+<h3 id="习题15-3"><a href="#习题15-3" class="headerlink" title="习题15.3"></a>习题15.3</h3><p>&emsp;&emsp;比较矩阵的奇异值分解与对称矩阵的对角化的异同。</p>
+<p>解 (1)<br>以$Ax = b$为例，$x$是$m$维向量，$b$是$n$维向量，$m,n$可以相等也可以不相等，表示矩阵可以将一个向量线性变换到另一个向量，这样一个线性变换的作用可以包含旋转、缩放和投影三种类型的效应</p>
+<p>奇异值分解正是对线性变换这三种效应的一个析构。$A = \mu\Sigma v^T$，$\mu$和$v$是两组正交单位向量，$Sigma$是对角阵，表示奇异值，它表示我们找到了$\mu$和$v$这样两组基，A矩阵的作用是将一个向量从这组正交基向量的空间旋转到这组正交基向量空间，并对每个方向进行了一定的缩放，缩放因子就是各个奇异值。如果维度比大，则表示还进行了投影</p>
+<p>而特征值分解其实是对旋转缩放两种效应的归并。（有投影效应的矩阵不是方阵，没有特征值）特征值，特征向量由Ax=x得到，它表示如果一个向量v处于A的特征向量方向，那么Av对v的线性变换作用只是一个缩放。也就是说，求特征向量和特征值的过程，我们找到了这样一组基，在这组基下，矩阵的作用效果仅仅是存粹的缩放。对于实对称矩阵，特征向量正交，我们可以将特征向量式子写成，这样就和奇异值分解类似了，就是A矩阵将一个向量从x这组基的空间旋转到x这组基的空间，并在每个方向进行了缩放，由于前后都是x，就是没有旋转或者理解为旋转了0度。</p>
+<p>不同之处：</p>
+<p>1.奇异值分解要对特征值开根号得到的奇异值$\sigma_i\geq 0$,特征值分解中特征值可正可负，对称的矩阵的对角化计算中可能需要施密特正交化</p>
+<p>2.特征值用来描述方阵，可看做是从一个空间到自身的映射,奇异值可以描述长方阵或奇异矩阵，可看做是从一个空间到另一个空间的映射</p>
+<p>相同之处：</p>
+<p>1.对于从n维空间到n维空间的恒等映射对称矩阵，若对称矩阵的所有特征值都大于等于0，则它的奇异值分解退化为特征值分解</p>
+<h3 id="习题15-4"><a href="#习题15-4" class="headerlink" title="习题15.4"></a>习题15.4</h3><p>&emsp;&emsp;证明任何一个秩为1的矩阵可写成两个向量的外积形式，并给出实例</p>
+<p>证明 我们令矩阵$A = \left[\begin{matrix} A_1,A_2,\cdots,A_n\end{matrix}\right]$,因为矩阵$A$中$rank(A)=1$则说明矩阵$A$中的最长的线性无关列向量组长度为1，即矩阵$A$中的任意一组列向量可由$A_i$线性表示出,即<br>$$<br>A_j = c_j * A_i, \quad  j=1,2, \cdots ,i,i+1,\cdots ,n<br>$$</p>
+<p>所以<br>$$<br>A= \left [ \begin{matrix} c_1Ai ,c_2A_i,\cdots,c_iA_i,\cdots,c_nA_i \end{matrix} \right ]<br>= A_i * \left [ \begin{matrix} c_1 ,c_2,\cdots,c_i,\cdots,c_n \end{matrix} \right]<br>$$</p>
+<h3 id="习题15-5"><a href="#习题15-5" class="headerlink" title="习题15.5"></a>习题15.5</h3><p>&emsp;&emsp;搜索中的点击数据记录用户搜索时提交的查询语句，点击的网页URL，以及点击次数，构成一个二部图，其中一个结点集合$\mathbf{｛}q_i\mathbf{｝}$ 表示查询，另一个结点集合$\mathbf{｛}u_j\mathbf{｝}$表示URL，边表示点击关系，边上的权重表示点击次数，图$15.2$是一个简化的点击数据例。点击数据可以由矩阵表示，试对改矩阵进行奇异值分解，并解释得到三个矩阵所表示的内容</p>
+<p>点击数据构成的矩阵是：<br>$$<br>X= \left[<br>\begin{array}{ccc}<br>0 &amp; 20 &amp; 5 &amp; 0 &amp; 0 \<br>10 &amp; 0 &amp; 0 &amp; 3 &amp; 0 \<br>0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \<br>0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \<br>\end{array}<br>\right ]<br>$$</p>
+<pre><code class="python">import numpy as np
+def SVD(A):
+    U, s, V = np.linalg.svd(A)
+    return U, s, V
+
+if __name__ == &#39;__main__&#39;:
+    A = np.array([[0, 20, 5, 0, 0],
+                  [10, 0, 0, 3, 0],
+                  [0, 0, 0, 0, 1],
+                  [0, 0, 1, 0, 0]])
+    U, s, V = SVD(A)
+    print(&#39;U is :&#39;, U)
+    print(&#39;s is :&#39;, s)
+    print(&#39;V is :&#39;, V)
+</code></pre>
+<pre><code>U is : [[ 9.99930496e-01 -1.01352447e-16  0.00000000e+00 -1.17899939e-02]
+ [ 0.00000000e+00  1.00000000e+00  0.00000000e+00 -8.65973959e-15]
+ [ 0.00000000e+00  0.00000000e+00  1.00000000e+00  0.00000000e+00]
+ [ 1.17899939e-02  8.65973959e-15  0.00000000e+00  9.99930496e-01]]
+s is : [20.61695792 10.44030651  1.          0.97007522]
+V is : [[ 0.00000000e+00  9.70007796e-01  2.43073808e-01  0.00000000e+00
+   0.00000000e+00]
+ [ 9.57826285e-01 -2.31404926e-16  8.02571613e-16  2.87347886e-01
+   0.00000000e+00]
+ [-0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00
+   1.00000000e+00]
+ [-7.97105437e-16 -2.43073808e-01  9.70007796e-01  0.00000000e+00
+   0.00000000e+00]
+ [ 2.87347886e-01 -1.01402229e-16  2.10571835e-16 -9.57826285e-01
+   0.00000000e+00]]
+</code></pre><p>$U$是左奇异矩阵，表示用户和潜在因子之间的关系。 $\Sigma$是描述每个潜在因子强度的对角矩阵，而$V^T$是右奇异矩阵，表示项和潜在因子之间的相似性。</p>
+<p>举个例子方便更深刻理解</p>
+<p>我们假设$url$代表不同音乐的网址，比如音乐$A$的$url$，音乐B的$url$，用户点击量代表该用户对音乐的评分，我们把潜在因子比喻为音乐性质分类比如小清新，古典，纯音乐等，矩阵$U$代表用户对潜在因子（不同风格音乐）的打分，矩阵 $\Sigma$代表每个潜在因子的权重，矩阵$V^T$代表音乐$A$等等中含有小清新成分占比，古典音乐的成分占比，纯音乐成分占比等。在做用户推荐的时候，我们已知该音乐是什么风格歌曲的信息，通过基于用户对潜在因子贡献率的隐藏变量，以及该音乐所含潜在因子占比，计算出用户对该音乐的评分，来更好的给用户推荐</p>
+<p>参考文献</p>
+<p>1.<a href="https://www.zhihu.com/question/19666954" target="_blank" rel="noopener">https://www.zhihu.com/question/19666954</a></p>
+<p>2,<a href="https://blog.csdn.net/qq_41626059/article/details/116894360" target="_blank" rel="noopener">https://blog.csdn.net/qq_41626059/article/details/116894360</a></p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/custom/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/custom/WeChatQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2021/06/08/2022/杂谈/RNN闲谈/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://tva2.sinaimg.cn/large/006BFMdqgy1gra6etdrdij615o0j9b2a02.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://tva2.sinaimg.cn/large/006BFMdqgy1gra6etdrdij615o0j9b2a02.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                RNN实现</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2021/06/06/2022/杂谈/21高考/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/wang1375830242/CDN/20.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/wang1375830242/CDN/20.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                21高考</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "Jiq7DwLJk7SE5cHYaQyoRss2-gzGzoHsz",
+        appKey: "6l2n8MzYg1TVB7aJB4O4gO7b",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+
+
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="little-feng.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/wang1375830242/CDN/images/indexjpg.jpg" itemprop="image" alt="little-feng" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="little-feng.top" itemprop="url" rel="author">little-feng</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>选择最难的路走暗夜里看成群的星星涌来</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2025 Little-Feng<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+     <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2018</p>
+    </div>
+   <a id="timeDate">载入天数...</a><a id="times">载入时分秒...</a>
+   <script>
+  var now = new Date();
+  function createtime() {
+    var grt= new Date("03/08/2020 16:44:00");//此处修改你的建站时间或者网站上线时间
+    now.setTime(now.getTime()+250);
+    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+    document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  }
+  setInterval("createtime()",250);</script>
+    <div id="binft" font-size=14px></div>
+  <script>
+    var binft = function (r) {
+      function t() {
+        return b[Math.floor(Math.random() * b.length)]
+      }
+      function e() {
+        return String.fromCharCode(94 * Math.random() + 33)
+      }
+      function n(r) {
+        for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+          var l = document.createElement("span");
+          l.textContent = e(), l.style.color = t(), n.appendChild(l)
+        }
+        return n
+      }
+      function i() {
+        var t = o[c.skillI];
+        c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+      }
+      var l = "",
+      o = ["一花一世界,一石一天国,君掌盛无边,刹那含永劫"].map(function (r) {
+      return r + ""
+      }),
+      a = 2,
+      g = 1,
+      s = 5,
+      d = 75,
+      b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+      c = {
+        text: "",
+        prefixP: -s,
+        skillI: 0,
+        skillP: 0,
+        direction: "forward",
+        delay: a,
+        step: g
+      };
+      i()
+      };
+      binft(document.getElementById('binft'));
+  </script>
+  </div><!-- .site-info -->
+  <!--壁纸切换-->
+  <div class="skin-menu no-select" id="mainskin"  style="position: fixed">
+      <div class="theme-controls row-container">
+          <ul class="menu-list">
+              <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+              <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+              <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+              <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+              <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+              <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+              <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+              <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+          </ul>
+      </div>
+      <div class="font-family-controls row-container">
+          <button type="button" class="control-btn-serif selected" data-mode="serif" onclick="mashiro_global.font_control.change_font()">Serif</button>
+          <button type="button" class="control-btn-sans-serif" data-mode="sans-serif" onclick="mashiro_global.font_control.change_font()">Sans Serif</button>
+      </div>
+  </div>   
+  <canvas id="night-mode-cover"></canvas> 
+    <div class="changeSkin-gear no-select">
+      <div class="keys" id="setbtn"> <span id="open-skinMenu"> 切换壁纸 | SCHEME TOOL 
+        &nbsp;<i class="iconfont icon-gear inline-block rotating"></i> </span></div>
+  </div><!-- skin.end -->
+</footer>
+<!-- <script src="/js/tocbot.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.min.js"></script>
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
+<script src='/js/Valine.min.js'></script>
+<!-- <script src="https://cdn.staticfile.org/twikoo/1.5.11/twikoo.all.min.js"></script> -->
+<!-- <script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script> -->
+<script src="/js/botui.js"></script>
+<!-- // 烟花 -->
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/js/fireworks.js"></script>
+<!-- 板娘 -->
+  <!--自定义看板娘-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script src="/live2d-widget/autoload.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+
+<!-- 樱花飘落 -->
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/sakura.js"></script>
+<!-- // 星星跟随坠落 -->
+<script src="https://cdn.jsdelivr.net/gh/cungudafa/cdn@2.1.2/js/cursor.js"></script>
+ <!--背景切换-->
+ <script src="https://instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<!-- 不蒜子 网页计数器 -->
+<!-- <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/video/","name":"起风了1.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/video/","name":"起风了1.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+<!-- <div style="text-align:center;margin-top:-40px;"><a href="https://beian.miit.gov.cn/#/Integrated/index">吉ICP备2021003904号-1</a></div> -->
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/little-haifeng/CDN@master/img/custom/avatar_1.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">とある科学の楓</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/honjun" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="http://weibo.com/mashirozx?is_all=1" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=3330909301&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/资源/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/随想/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/转载/">
+                  <i class="fa fa-book" aria-hidden="true"></i>
+                  转载
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/">
+                  <i class="fa fa-tag" aria-hidden="true"></i>
+                  标签
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/">
+                  <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  分类
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/analytics/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-line-chart" aria-hidden="true"></i>
+            统计
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+              <li>
+                <a href="/lab/">
+                  <i class="fa fa-cogs" aria-hidden="true"></i>
+                  Lab
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="6750683218"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.3"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>
