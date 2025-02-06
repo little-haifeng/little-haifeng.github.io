@@ -589,11 +589,11 @@
       <div class="post-meta">
         <span><i class="fa fa-tags"></i>
         
-            <a href="/tags/JETSON-XAVIER-NX/">JETSON XAVIER NX<em>·</em></a>
-          
             <a href="/tags/Yolov5模型/">Yolov5模型<em>·</em></a>
           
             <a href="/tags/TensorRT加速/">TensorRT加速<em>·</em></a>
+          
+            <a href="/tags/JETSON-XAVIER-NX/">JETSON XAVIER NX<em>·</em></a>
           
         </span>
         <span>
@@ -634,9 +634,9 @@
       <div class="post-meta">
         <span><i class="fa fa-tags"></i>
         
-            <a href="/tags/IBUS输入法设置/">IBUS输入法设置<em>·</em></a>
-          
             <a href="/tags/JETSON-XAVIER-NX/">JETSON XAVIER NX<em>·</em></a>
+          
+            <a href="/tags/IBUS输入法设置/">IBUS输入法设置<em>·</em></a>
           
         </span>
         <span>
@@ -708,7 +708,7 @@
     <!-- 
       <nav class="navigator">
         
-        <a class="extend prev" rel="prev" href="/page/3/"><i class="iconfont icon-back"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="iconfont icon-right"></i></a>
+        <a class="extend prev" rel="prev" href="/page/3/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/">Next</a>
       </nav>
      -->
   </div>
@@ -722,7 +722,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <input type="text" class="ins-search-input" placeholder="Type something..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -734,10 +734,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: '文章',
-            // PAGES: '页面',
-            CATEGORIES: '分类',
-            TAGS: '标签',
+            POSTS: 'Posts',
+            // PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
@@ -761,9 +761,9 @@
         <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
         <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
       </div>
-      <p style="color: #666666;">&copy 2018</p>
+      <!-- <p style="color: #ff9999;">&copy 2018</p> -->
     </div>
-   <a id="timeDate">载入天数...</a><a id="times">载入时分秒...</a>
+   <!-- <a id="timeDate">载入天数...</a><a id="times">载入时分秒...</a>
    <script>
   var now = new Date();
   function createtime() {
@@ -775,10 +775,37 @@
     mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
     seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
     snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-    document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+    document.getElementById("timeDate").innerHTML = "小破站在各种灾难中苟活了 "+dnum+" 天 ";
     document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
   }
-  setInterval("createtime()",250);</script>
+  setInterval("createtime()",250);</script> -->
+
+  <!-- 网站数据统计 -->
+  <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+      <span style="color: #ff9999;padding-left: 20px;">
+          <!-- 网站运行时间统计 -->
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+          <span id="time" align="center">载入时间中...</span>
+          <script>
+          var now = new Date(); 
+          function createtime() { 
+                var grt= new Date("07/05/2021");//在此处修改你的建站时间
+                now.setTime(now.getTime()+250); 
+                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                document.getElementById("time").innerHTML = "小破站在各种灾难中苟活了 "+ dnum +" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒";      
+            } 
+            setInterval("createtime()",250);
+          </script>
+      </span> 
+    </p>
+  </div>
+  
     <div id="binft" font-size=14px></div>
   <script>
     var binft = function (r) {
