@@ -51,7 +51,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://imgapi.xl0408.top/index.php,https://api.yimian.xyz/img,https://api.r10086.com/PPT/PPT.php?PPT=%E5%8E%9F%E7%A5%9E".split(",");
+  var bg = "https://imgapi.xl0408.top/index.php,https://api.yimian.xyz/img".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert('朋友，IE浏览器未适配哦~');
@@ -622,11 +622,11 @@
                 </a>
                 
                 
-                <a href="/categories/哲学/" title="哲学: 1">
+                <a href="/categories/数学/" title="数学: 8">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">哲学
-                        <span class="tag-length">1</span>
+                            style="background-color: #D5F5E3;">数学
+                        <span class="tag-length">8</span>
                     </span>
                 </a>
                 
@@ -640,20 +640,20 @@
                 </a>
                 
                 
-                <a href="/categories/JETSON-XAVIER-NX/" title="JETSON XAVIER NX: 7">
+                <a href="/categories/哲学/" title="哲学: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #FEF9E7;">JETSON XAVIER NX
-                        <span class="tag-length">7</span>
+                            style="background-color: #FEF9E7;">哲学
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/数学/" title="数学: 8">
+                <a href="/categories/JETSON-XAVIER-NX/" title="JETSON XAVIER NX: 7">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F8F9F9;">数学
-                        <span class="tag-length">8</span>
+                            style="background-color: #F8F9F9;">JETSON XAVIER NX
+                        <span class="tag-length">7</span>
                     </span>
                 </a>
                 
@@ -709,7 +709,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"校园生活","max":13},{"name":"生活","max":13},{"name":"哲学","max":13},{"name":"技术","max":13},{"name":"JETSON XAVIER NX","max":13},{"name":"数学","max":13},{"name":"深度学习","max":13}],
+            indicator: [{"name":"校园生活","max":13},{"name":"生活","max":13},{"name":"数学","max":13},{"name":"技术","max":13},{"name":"哲学","max":13},{"name":"JETSON XAVIER NX","max":13},{"name":"深度学习","max":13}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -720,7 +720,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [3,12,1,7,7,8,1],
+                    value : [3,12,8,7,1,7,1],
                     name : '文章分类数量'
                 }
             ]
@@ -738,7 +738,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -750,10 +750,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
-            // PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
