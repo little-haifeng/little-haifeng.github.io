@@ -604,19 +604,10 @@
                 
                 
                 
-                <a href="/categories/技术/" title="技术: 9">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">技术
-                        <span class="tag-length">9</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/categories/校园生活/" title="校园生活: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">校园生活
+                            style="background-color: #F9EBEA;">校园生活
                         <span class="tag-length">3</span>
                     </span>
                 </a>
@@ -625,17 +616,17 @@
                 <a href="/categories/生活/" title="生活: 12">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">生活
+                            style="background-color: #F5EEF8;">生活
                         <span class="tag-length">12</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/哲学/" title="哲学: 1">
+                <a href="/categories/技术/" title="技术: 7">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #E8F8F5;">哲学
-                        <span class="tag-length">1</span>
+                            style="background-color: #D5F5E3;">技术
+                        <span class="tag-length">7</span>
                     </span>
                 </a>
                 
@@ -643,8 +634,17 @@
                 <a href="/categories/数学/" title="数学: 8">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #FEF9E7;">数学
+                            style="background-color: #E8F8F5;">数学
                         <span class="tag-length">8</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/哲学/" title="哲学: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #FEF9E7;">哲学
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -709,7 +709,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"技术","max":13},{"name":"校园生活","max":13},{"name":"生活","max":13},{"name":"哲学","max":13},{"name":"数学","max":13},{"name":"JETSON XAVIER NX","max":13},{"name":"深度学习","max":13}],
+            indicator: [{"name":"校园生活","max":13},{"name":"生活","max":13},{"name":"技术","max":13},{"name":"数学","max":13},{"name":"哲学","max":13},{"name":"JETSON XAVIER NX","max":13},{"name":"深度学习","max":13}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -720,7 +720,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [9,3,12,1,8,7,1],
+                    value : [3,12,7,8,1,7,1],
                     name : '文章分类数量'
                 }
             ]
@@ -738,7 +738,7 @@
     <div class="ins-search-mask"></div>
     <div class="ins-search-container">
         <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..."/>
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="ins-section-wrapper">
@@ -750,10 +750,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
-            // PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
         },
         ROOT_URL: '/',
         CONTENT_URL: '/content.json',
