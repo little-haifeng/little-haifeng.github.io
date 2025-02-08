@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2025-02-06T13:58:22.426Z</updated>
+  <updated>2025-02-08T06:11:40.245Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>心思1</title>
+    <link href="/2025/02/07/2025/02.08/"/>
+    <id>/2025/02/07/2025/02.08/</id>
+    <published>2025-02-08T05:49:30.711Z</published>
+    <updated>2025-02-08T06:11:40.245Z</updated>
+    
+    <summary type="html">
+    
+      有东西被加密了, 请输入密码查看.
+    
+    </summary>
+    
+      <category term="校园生活" scheme="/categories/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="加密文章" scheme="/tags/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>邵总专辑</title>
     <link href="/2025/02/06/2025/%E9%82%B5%E8%89%B3%E5%A9%B7%E4%B8%93%E8%BE%91/"/>
     <id>/2025/02/06/2025/邵艳婷专辑/</id>
     <published>2025-02-07T04:33:14.000Z</published>
-    <updated>2025-02-06T13:58:22.426Z</updated>
+    <updated>2025-02-07T08:56:03.520Z</updated>
     
     <summary type="html">
     
@@ -399,26 +419,6 @@
     
     
       <category term="深度学习" scheme="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sublime Text python 配置</title>
-    <link href="/2021/08/16/2022/%E7%BC%96%E7%A8%8B/Sublime%20Text%20python%20%E9%85%8D%E7%BD%AE/"/>
-    <id>/2021/08/16/2022/编程/Sublime Text python 配置/</id>
-    <published>2021-08-16T23:40:07.000Z</published>
-    <updated>2025-02-06T12:55:26.405Z</updated>
-    
-    <summary type="html">
-    
-      咸鱼日志
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Sublime Text" scheme="/tags/Sublime-Text/"/>
     
   </entry>
   
