@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2025-02-08T06:15:39.355Z</updated>
+  <updated>2025-02-11T13:33:14.655Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>心思2</title>
+    <link href="/2025/02/11/2025/02.11/"/>
+    <id>/2025/02/11/2025/02.11/</id>
+    <published>2025-02-11T13:30:33.247Z</published>
+    <updated>2025-02-11T13:33:14.655Z</updated>
+    
+    <summary type="html">
+    
+      有东西被加密了, 请输入密码查看.
+    
+    </summary>
+    
+      <category term="校园生活" scheme="/categories/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="心思" scheme="/tags/%E5%BF%83%E6%80%9D/"/>
+    
+  </entry>
   
   <entry>
     <title>心思1</title>
@@ -41,7 +61,7 @@
     <link href="/2025/02/06/2025/%E9%82%B5%E8%89%B3%E5%A9%B7%E4%B8%93%E8%BE%91/"/>
     <id>/2025/02/06/2025/邵艳婷专辑/</id>
     <published>2025-02-07T04:33:14.000Z</published>
-    <updated>2025-02-10T16:20:03.719Z</updated>
+    <updated>2025-02-10T16:20:44.516Z</updated>
     
     <summary type="html">
     
@@ -399,26 +419,6 @@
     
     
       <category term="快乐售卖机" scheme="/tags/%E5%BF%AB%E4%B9%90%E5%94%AE%E5%8D%96%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习小技巧 mini-batch 梯度下降</title>
-    <link href="/2021/08/18/2022/%E7%BC%96%E7%A8%8B/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%B0%8F%E6%8A%80%E5%B7%A7%20mini-batch%20%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/"/>
-    <id>/2021/08/18/2022/编程/深度学习小技巧 mini-batch 梯度下降/</id>
-    <published>2021-08-18T23:17:29.000Z</published>
-    <updated>2023-03-09T07:12:52.369Z</updated>
-    
-    <summary type="html">
-    
-      咸鱼日记
-    
-    </summary>
-    
-      <category term="深度学习" scheme="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="深度学习" scheme="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
