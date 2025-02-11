@@ -136,7 +136,7 @@
 	background: transparent;
 	padding: 0.5em;
 	margin-bottom: 2em;
-	color: #f9f7f6;
+	color: #ffffff;
 	z-index: 100;
 	opacity: 0;
 }
@@ -160,7 +160,7 @@
 
 .hbe-input-label-default::before {
 	height: 100%;
-	background: #666666;
+	background: #f20000;
 	top: 0;
 	-webkit-transform: translate3d(0, -100%, 0);
 	transform: translate3d(0, -100%, 0);
@@ -170,7 +170,7 @@
 
 .hbe-input-label-default::after {
 	height: 2px;
-	background: #666666;
+	background: #a55d5d;
 	top: 100%;
 	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
@@ -213,7 +213,7 @@
 
 .hbe-input-field-default:focus + .hbe-input-label-default .hbe-input-label-content-default,
 .hbe-input--filled .hbe-input-label-default .hbe-input-label-content-default {
-	color: #555555;
+	color: #ffffff;
 	-webkit-transform: translate3d(0, 2.1em, 0) scale3d(0.65, 0.65, 1);
 	transform: translate3d(0, 2.1em, 0) scale3d(0.65, 0.65, 1);
 }
@@ -755,7 +755,7 @@
 .hbe-input-label-default {
   background: none !important; /* 或者你想要的颜色，比如 #fff */
   border: 1px solid #ffffff;      /* 根据需要加边框 */
-  color: #333;                 /* 让文字看得清楚 */
+  color: #e46161;                 /* 让文字看得清楚 */
 }
 
 /* 如果还想改 label 显示效果，也可以一起改 */
@@ -766,7 +766,7 @@
 .hbe-input-field-default {
 	background-color: #fff !important;
 	border: 1px solid #ffffff;
-	color: #333;
+	color: #ffffff;
   }
   
   
