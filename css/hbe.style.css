@@ -747,3 +747,23 @@
 	transform: translate3d(0, 2em, 0) scale3d(0.655, 0.655, 1);
 }
 /* shrink theme }}} */
+
+
+.hbe-input-field-default,
+.hbe-input-label-default {
+  background: none !important; /* 或者你想要的颜色，比如 #fff */
+  border: 1px solid #ccc;      /* 根据需要加边框 */
+  color: #333;                 /* 让文字看得清楚 */
+}
+
+/* 如果还想改 label 显示效果，也可以一起改 */
+.hbe-input-label-content-default {
+  background: none !important;
+  /* 其它个性化设置 */
+}
+
+.hbe-input-field-default {
+  background-color: #fff !important;
+  border: 1px solid #ccc;
+  color: #333;
+}
