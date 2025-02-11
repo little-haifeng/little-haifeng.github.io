@@ -754,7 +754,7 @@
 .hbe-input-field-default,
 .hbe-input-label-default {
   background: none !important; /* 或者你想要的颜色，比如 #fff */
-  border: 1px solid #ffffff;      /* 根据需要加边框 */
+  border: 1px solid #b9b9b9;      /* 根据需要加边框 */
   color: #333;                 /* 让文字看得清楚 */
 }
 
