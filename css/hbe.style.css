@@ -170,7 +170,7 @@
 
 .hbe-input-label-default::after {
 	height: 2px;
-	background: #ff9696;
+	background: #696969;
 	top: 100%;
 	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
