@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2025-02-11T14:26:10.124Z</updated>
+  <updated>2025-02-14T09:19:33.455Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>心思3</title>
+    <link href="/2025/02/14/2025/02.14/"/>
+    <id>/2025/02/14/2025/02.14/</id>
+    <published>2025-02-15T00:32:14.000Z</published>
+    <updated>2025-02-14T09:19:33.455Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&amp;emsp;&amp;emsp;INFJ从始至终就是孤独的。所以经常会找一些事做。他们基本上从不告诉任何人任何事，所以负面的事基本上内部消化。他们经常静静在某个角落发发呆，或者听听歌。思考着一些问题或者一些事情。所以你偶尔也能看到一些人在某个角落静悄悄的发着呆。享受一个人的世界的宁
+        
+      
+    
+    </summary>
+    
+      <category term="校园生活" scheme="/categories/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="心思" scheme="/tags/%E5%BF%83%E6%80%9D/"/>
+    
+  </entry>
   
   <entry>
     <title>心思2</title>
@@ -414,26 +440,6 @@
     
     
       <category term="加密文章" scheme="/tags/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021暑假咸鱼日志_3</title>
-    <link href="/2021/08/21/2022/%E5%92%B8%E9%B1%BC%E6%97%A5%E5%BF%97/2021%E6%9A%91%E5%81%87%E5%92%B8%E9%B1%BC%E6%97%A5%E5%BF%97_3/"/>
-    <id>/2021/08/21/2022/咸鱼日志/2021暑假咸鱼日志_3/</id>
-    <published>2021-08-21T17:59:10.000Z</published>
-    <updated>2025-02-06T12:55:26.393Z</updated>
-    
-    <summary type="html">
-    
-      咸鱼日志
-    
-    </summary>
-    
-      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="快乐售卖机" scheme="/tags/%E5%BF%AB%E4%B9%90%E5%94%AE%E5%8D%96%E6%9C%BA/"/>
     
   </entry>
   
