@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2025-02-14T09:19:33.455Z</updated>
+  <updated>2025-02-15T03:27:24.698Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,56 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>心思4</title>
+    <link href="/2025/02/15/2025/02.15/"/>
+    <id>/2025/02/15/2025/02.15/</id>
+    <published>2025-02-15T19:27:53.000Z</published>
+    <updated>2025-02-15T03:27:24.698Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;生活真的是一团烂七八糟&lt;/p&gt;
+&lt;/blockquote&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="校园生活" scheme="/categories/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="心思" scheme="/tags/%E5%BF%83%E6%80%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pages</title>
+    <link href="/2025/02/14/pages/"/>
+    <id>/2025/02/14/pages/</id>
+    <published>2025-02-15T03:22:53.000Z</published>
+    <updated>2025-02-15T03:22:53.688Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>心思3</title>
     <link href="/2025/02/14/2025/02.14/"/>
     <id>/2025/02/14/2025/02.14/</id>
     <published>2025-02-15T00:32:14.000Z</published>
-    <updated>2025-02-14T09:19:33.455Z</updated>
+    <updated>2025-02-14T09:25:14.389Z</updated>
     
     <summary type="html">
     
@@ -400,46 +445,6 @@
       <category term="校园生活" scheme="/tags/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
     
       <category term="旅游" scheme="/tags/%E6%97%85%E6%B8%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>校园生活-1</title>
-    <link href="/2021/09/13/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-1/"/>
-    <id>/2021/09/13/2022/校园生活/校园生活-1/</id>
-    <published>2021-09-14T06:18:16.000Z</published>
-    <updated>2023-03-09T07:12:52.371Z</updated>
-    
-    <summary type="html">
-    
-      校园生活
-    
-    </summary>
-    
-      <category term="校园生活" scheme="/categories/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="校园生活" scheme="/tags/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021暑假咸鱼日志_4</title>
-    <link href="/2021/08/24/2022/%E5%92%B8%E9%B1%BC%E6%97%A5%E5%BF%97/2021%E6%9A%91%E5%81%87%E5%92%B8%E9%B1%BC%E6%97%A5%E5%BF%97_4/"/>
-    <id>/2021/08/24/2022/咸鱼日志/2021暑假咸鱼日志_4/</id>
-    <published>2021-08-25T05:39:12.000Z</published>
-    <updated>2025-02-06T12:55:26.393Z</updated>
-    
-    <summary type="html">
-    
-      咸鱼日志
-    
-    </summary>
-    
-      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="加密文章" scheme="/tags/%E5%8A%A0%E5%AF%86%E6%96%87%E7%AB%A0/"/>
     
   </entry>
   
