@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2025-02-15T03:27:24.698Z</updated>
+  <updated>2025-02-16T13:28:05.987Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>说说-2</title>
+    <link href="/2025/02/16/2025/02.16/"/>
+    <id>/2025/02/16/2025/02.16/</id>
+    <published>2025-02-16T13:25:21.000Z</published>
+    <updated>2025-02-16T13:28:05.987Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;INFJ的病情越来越恶化了&lt;/p&gt;
+&lt;/blockquote&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="校园生活" scheme="/categories/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="说说" scheme="/tags/%E8%AF%B4%E8%AF%B4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>心思4</title>
     <link href="/2025/02/15/2025/02.15/"/>
     <id>/2025/02/15/2025/02.15/</id>
-    <published>2025-02-15T19:27:53.000Z</published>
-    <updated>2025-02-15T03:27:24.698Z</updated>
+    <published>2025-02-15T03:27:53.000Z</published>
+    <updated>2025-02-16T13:26:37.594Z</updated>
     
     <summary type="html">
     
@@ -41,7 +70,7 @@
       <category term="校园生活" scheme="/categories/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="心思" scheme="/tags/%E5%BF%83%E6%80%9D/"/>
+      <category term="说说" scheme="/tags/%E8%AF%B4%E8%AF%B4/"/>
     
   </entry>
   
@@ -49,7 +78,7 @@
     <title>心思3</title>
     <link href="/2025/02/14/2025/02.14/"/>
     <id>/2025/02/14/2025/02.14/</id>
-    <published>2025-02-15T00:32:14.000Z</published>
+    <published>2025-02-14T08:32:14.000Z</published>
     <updated>2025-02-14T09:25:14.389Z</updated>
     
     <summary type="html">
@@ -99,8 +128,8 @@
   
   <entry>
     <title>心思1</title>
-    <link href="/2025/02/07/2025/02.08/"/>
-    <id>/2025/02/07/2025/02.08/</id>
+    <link href="/2025/02/08/2025/02.08/"/>
+    <id>/2025/02/08/2025/02.08/</id>
     <published>2025-02-08T05:49:30.711Z</published>
     <updated>2025-02-08T06:15:39.355Z</updated>
     
@@ -121,7 +150,7 @@
     <title>邵总专辑</title>
     <link href="/2025/02/06/2025/%E9%82%B5%E8%89%B3%E5%A9%B7%E4%B8%93%E8%BE%91/"/>
     <id>/2025/02/06/2025/邵艳婷专辑/</id>
-    <published>2025-02-07T04:33:14.000Z</published>
+    <published>2025-02-06T12:33:14.000Z</published>
     <updated>2025-02-11T14:14:51.868Z</updated>
     
     <summary type="html">
@@ -150,7 +179,7 @@
     <title>告别</title>
     <link href="/2023/07/09/2023/%E5%91%8A%E5%88%AB/"/>
     <id>/2023/07/09/2023/告别/</id>
-    <published>2023-07-10T06:35:14.000Z</published>
+    <published>2023-07-09T15:35:14.000Z</published>
     <updated>2025-02-06T12:55:26.393Z</updated>
     
     <summary type="html">
@@ -170,7 +199,7 @@
     <title>致谢</title>
     <link href="/2023/07/09/2023/%E8%87%B4%E8%B0%A2/"/>
     <id>/2023/07/09/2023/致谢/</id>
-    <published>2023-07-10T06:23:16.000Z</published>
+    <published>2023-07-09T15:23:16.000Z</published>
     <updated>2025-02-06T12:55:26.383Z</updated>
     
     <summary type="html">
@@ -194,7 +223,7 @@
     <title>我的共产主义观</title>
     <link href="/2022/12/28/2022/%E6%9D%82%E8%B0%88/%E6%88%91%E7%9A%84%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%93%B2%E5%AD%A6%E8%A7%82/"/>
     <id>/2022/12/28/2022/杂谈/我的马克思主义哲学观/</id>
-    <published>2022-12-29T02:46:34.000Z</published>
+    <published>2022-12-28T10:46:34.000Z</published>
     <updated>2023-03-09T07:12:52.371Z</updated>
     
     <summary type="html">
@@ -214,7 +243,7 @@
     <title>幂级数浅谈2</title>
     <link href="/2022/06/23/2022/%E7%BC%96%E7%A8%8B/%E6%95%B0%E5%AD%A6math/%E5%B9%82%E7%BA%A7%E6%95%B0%E6%B5%85%E8%B0%882/"/>
     <id>/2022/06/23/2022/编程/数学math/幂级数浅谈2/</id>
-    <published>2022-06-24T04:20:34.000Z</published>
+    <published>2022-06-23T13:20:34.000Z</published>
     <updated>2023-03-09T07:12:52.369Z</updated>
     
     <summary type="html">
@@ -234,7 +263,7 @@
     <title>幂级数浅谈1</title>
     <link href="/2022/06/20/2022/%E7%BC%96%E7%A8%8B/%E6%95%B0%E5%AD%A6math/%E5%B9%82%E7%BA%A7%E6%95%B0%E6%B5%85%E8%B0%881/"/>
     <id>/2022/06/20/2022/编程/数学math/幂级数浅谈1/</id>
-    <published>2022-06-20T15:47:25.000Z</published>
+    <published>2022-06-20T00:47:25.000Z</published>
     <updated>2025-02-06T12:55:26.405Z</updated>
     
     <summary type="html">
@@ -254,7 +283,7 @@
     <title>深思-1</title>
     <link href="/2021/12/19/2022/%E6%9D%82%E8%B0%88/%E6%B7%B1%E6%80%9D-1/"/>
     <id>/2021/12/19/2022/杂谈/深思-1/</id>
-    <published>2021-12-20T07:03:35.000Z</published>
+    <published>2021-12-19T15:03:35.000Z</published>
     <updated>2023-03-09T07:12:52.371Z</updated>
     
     <summary type="html">
@@ -274,7 +303,7 @@
     <title>伽罗瓦理论：人类至今无解的五次方程</title>
     <link href="/2021/12/10/2022/%E7%BC%96%E7%A8%8B/%E6%95%B0%E5%AD%A6math/%E4%BC%BD%E7%BD%97%E7%93%A6%E7%90%86%E8%AE%BA%EF%BC%9A%E4%BA%BA%E7%B1%BB%E8%87%B3%E4%BB%8A%E6%97%A0%E8%A7%A3%E7%9A%84%E4%BA%94%E6%AC%A1%E6%96%B9%E7%A8%8B/"/>
     <id>/2021/12/10/2022/编程/数学math/伽罗瓦理论：人类至今无解的五次方程/</id>
-    <published>2021-12-11T07:18:18.000Z</published>
+    <published>2021-12-10T15:18:18.000Z</published>
     <updated>2023-03-09T07:12:52.370Z</updated>
     
     <summary type="html">
@@ -294,7 +323,7 @@
     <title>校园生活-7</title>
     <link href="/2021/12/06/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-7/"/>
     <id>/2021/12/06/2022/校园生活/校园生活-7/</id>
-    <published>2021-12-07T06:51:48.000Z</published>
+    <published>2021-12-06T14:51:48.000Z</published>
     <updated>2023-03-09T07:12:52.370Z</updated>
     
     <summary type="html">
@@ -314,7 +343,7 @@
     <title>校园生活-6</title>
     <link href="/2021/12/04/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-6/"/>
     <id>/2021/12/04/2022/校园生活/校园生活-6/</id>
-    <published>2021-12-05T06:39:35.000Z</published>
+    <published>2021-12-04T14:39:35.000Z</published>
     <updated>2023-03-09T07:12:52.370Z</updated>
     
     <summary type="html">
@@ -334,7 +363,7 @@
     <title>校园生活-5</title>
     <link href="/2021/11/20/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-5/"/>
     <id>/2021/11/20/2022/校园生活/校园生活-5/</id>
-    <published>2021-11-20T10:08:32.000Z</published>
+    <published>2021-11-19T18:08:32.000Z</published>
     <updated>2025-02-10T15:18:57.884Z</updated>
     
     <summary type="html">
@@ -354,7 +383,7 @@
     <title>nodejs配置</title>
     <link href="/2021/11/17/2022/%E7%BC%96%E7%A8%8B/nodejs%E9%85%8D%E7%BD%AE/"/>
     <id>/2021/11/17/2022/编程/nodejs配置/</id>
-    <published>2021-11-17T20:17:51.000Z</published>
+    <published>2021-11-17T04:17:51.000Z</published>
     <updated>2023-03-09T07:12:52.369Z</updated>
     
     <summary type="html">
@@ -374,7 +403,7 @@
     <title>校园生活-4</title>
     <link href="/2021/10/26/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-4/"/>
     <id>/2021/10/26/2022/校园生活/校园生活-4/</id>
-    <published>2021-10-27T06:54:51.000Z</published>
+    <published>2021-10-26T15:54:51.000Z</published>
     <updated>2023-03-09T07:12:52.370Z</updated>
     
     <summary type="html">
@@ -394,7 +423,7 @@
     <title>校园生活-3</title>
     <link href="/2021/10/03/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-3/"/>
     <id>/2021/10/03/2022/校园生活/校园生活-3/</id>
-    <published>2021-10-04T05:40:14.000Z</published>
+    <published>2021-10-03T14:40:14.000Z</published>
     <updated>2025-02-06T12:55:26.405Z</updated>
     
     <summary type="html">
@@ -414,7 +443,7 @@
     <title>校园生活-2</title>
     <link href="/2021/09/21/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-2/"/>
     <id>/2021/09/21/2022/校园生活/校园生活-2/</id>
-    <published>2021-09-22T05:44:46.000Z</published>
+    <published>2021-09-21T14:44:46.000Z</published>
     <updated>2025-02-06T12:55:26.393Z</updated>
     
     <summary type="html">
@@ -429,26 +458,6 @@
       <category term="校园生活" scheme="/tags/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
     
       <category term="旅游" scheme="/tags/%E6%97%85%E6%B8%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>校园生活-1</title>
-    <link href="/2021/09/13/2022/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB-1/"/>
-    <id>/2021/09/13/2022/校园生活/校园生活-1/</id>
-    <published>2021-09-14T06:18:16.000Z</published>
-    <updated>2023-03-09T07:12:52.371Z</updated>
-    
-    <summary type="html">
-    
-      校园生活
-    
-    </summary>
-    
-      <category term="校园生活" scheme="/categories/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="校园生活" scheme="/tags/%E6%A0%A1%E5%9B%AD%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
